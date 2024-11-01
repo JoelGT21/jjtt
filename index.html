@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatuajes Temporales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Tatuajes Temporales Únicos</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#simulador">Simulador</a>
+            <a href="#testimonios">Testimonios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <!-- Icono del carrito -->
+        <div id="cart-icon" onclick="toggleCart()">
+            🛒 <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <!-- Ventana emergente del carrito -->
+    <div id="cart-modal">
+        <button id="close-cart" onclick="toggleCart()">✖</button>
+        <h2>Tu Carrito</h2>
+        <div id="cart-items"></div>
+        <button onclick="checkout()">Proceder al Pago</button>
+    </div>
+
+    <!-- Sección de inicio -->
+    <section id="inicio">
+        <h2>Bienvenido a Tatuajes Temporales</h2>
+        <p>Prueba nuestros diseños únicos sin compromiso. ¡Explora y descubre cuál se adapta mejor a ti!</p>
+        <img src="banner.jpg" alt="Imagen destacada de tatuajes">
+    </section>
+
+<!-- Catálogo de tatuajes -->
+<section id="catalogo">
+    <h2>Catálogo de Tatuajes</h2>
+    <div class="tattoo-grid">
+        <div class="tattoo-item">
+            <img src="tattoo1.jpg" alt="Tatuaje Floral">
+            <h3>Tatuaje Floral</h3>
+            <p>Un diseño floral único.</p>
+            <p>$10.00</p>
+            <button onclick="addToCart('Tatuaje Floral', 10)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo2.jpg" alt="Tatuaje Tribal">
+            <h3>Tatuaje Tribal</h3>
+            <p>Diseño tribal contemporáneo.</p>
+            <p>$12.00</p>
+            <button onclick="addToCart('Tatuaje Tribal', 12)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo3.jpg" alt="Tatuaje Geométrico">
+            <h3>Tatuaje Geométrico</h3>
+            <p>Arte geométrico en su máxima expresión.</p>
+            <p>$15.00</p>
+            <button onclick="addToCart('Tatuaje Geométrico', 15)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo4.jpg" alt="Tatuaje Minimalista">
+            <h3>Tatuaje Minimalista</h3>
+            <p>Elegancia y simplicidad en un diseño.</p>
+            <p>$8.00</p>
+            <button onclick="addToCart('Tatuaje Minimalista', 8)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo5.jpg" alt="Tatuaje Animal">
+            <h3>Tatuaje Animal</h3>
+            <p>Explora la naturaleza en tu piel.</p>
+            <p>$11.00</p>
+            <button onclick="addToCart('Tatuaje Animal', 11)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo6.jpg" alt="Tatuaje de Mandala">
+            <h3>Tatuaje de Mandala</h3>
+            <p>Simetría y armonía en un diseño.</p>
+            <p>$13.00</p>
+            <button onclick="addToCart('Tatuaje de Mandala', 13)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo7.jpg" alt="Tatuaje de Calavera">
+            <h3>Tatuaje de Calavera</h3>
+            <p>Un clásico moderno.</p>
+            <p>$14.00</p>
+            <button onclick="addToCart('Tatuaje de Calavera', 14)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo8.jpg" alt="Tatuaje Abstracto">
+            <h3>Tatuaje Abstracto</h3>
+            <p>Expresa lo desconocido.</p>
+            <p>$9.00</p>
+            <button onclick="addToCart('Tatuaje Abstracto', 9)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo9.jpg" alt="Tatuaje Japonés">
+            <h3>Tatuaje Japonés</h3>
+            <p>Inspirado en el arte japonés.</p>
+            <p>$18.00</p>
+            <button onclick="addToCart('Tatuaje Japonés', 18)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo10.jpg" alt="Tatuaje Celestial">
+            <h3>Tatuaje Celestial</h3>
+            <p>Inspiración del universo.</p>
+            <p>$16.00</p>
+            <button onclick="addToCart('Tatuaje Celestial', 16)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo11.jpg" alt="Tatuaje Místico">
+            <h3>Tatuaje Místico</h3>
+            <p>Un toque de misterio y magia.</p>
+            <p>$14.00</p>
+            <button onclick="addToCart('Tatuaje Místico', 14)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo12.jpg" alt="Tatuaje Vintage">
+            <h3>Tatuaje Vintage</h3>
+            <p>Estilo clásico con toque moderno.</p>
+            <p>$10.00</p>
+            <button onclick="addToCart('Tatuaje Vintage', 10)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo13.jpg" alt="Tatuaje de Frase">
+            <h3>Tatuaje de Frase</h3>
+            <p>Inspírate con palabras significativas.</p>
+            <p>$7.00</p>
+            <button onclick="addToCart('Tatuaje de Frase', 7)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo14.jpg" alt="Tatuaje Realista">
+            <h3>Tatuaje Realista</h3>
+            <p>Diseño realista impresionante.</p>
+            <p>$20.00</p>
+            <button onclick="addToCart('Tatuaje Realista', 20)">Agregar al Carrito</button>
+        </div>
+        <div class="tattoo-item">
+            <img src="tattoo15.jpg" alt="Tatuaje Esotérico">
+            <h3>Tatuaje Esotérico</h3>
+            <p>Diseño lleno de simbolismo.</p>
+            <p>$15.00</p>
+            <button onclick="addToCart('Tatuaje Esotérico', 15)">Agregar al Carrito</button>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Simulador de tatuajes -->
+    <section id="simulador">
+        <h2>Prueba tu Tatuaje</h2>
+        <p>Sube una foto para ver cómo te queda el tatuaje. (Próximamente)</p>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <h2>Testimonios de Clientes</h2>
+        <p>"Me encantó probar el tatuaje antes de hacerme el real, ¡se veía increíble!" - Cliente satisfecho</p>
+        <!-- Añadir más testimonios aquí -->
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas? Envíanos un mensaje.</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tatuajes Temporales. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al archivo de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ffa500;
+}
+
+/* Secciones */
+section {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Catálogo */
+.tattoo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tattoo-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    max-width: 200px;
+    text-align: center;
+}
+
+.tattoo-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Contacto */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+#cart-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#cart-modal {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+#cart-items {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1em;
+}
+/* Estilo del botón de cierre del modal */
+#close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Estilo para el catálogo */
+.tattoo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 10px; /* Espacio entre los elementos, puedes ajustar este valor */
+    margin: 0 auto; /* Centrar el contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+/* Estilo para cada tatuaje */
+.tattoo-item {
+    border: 1px solid #ccc; /* Borde de los tatuajes */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+}
+
+
